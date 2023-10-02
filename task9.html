@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>JS Task-3</title>
+        <style>
+            #x{
+                border: 1px solid; 
+                width: max-content;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="x">
+            <p>
+                1st Number: <input type="text" id="n1">
+            </p>
+            <p>
+                2nd Number: <input type="text" id="n2">
+            </p>
+            <p>
+                <button onclick="fun1()">Multiply</button> 
+                <button onclick="fun2()">Divide</button>
+            </p>
+    
+            <span id="result"></span>
+        </div>
+        
+    </body>
+    <script>
+        function fun1(){
+            var a = document.getElementById('n1').value;
+            var b = document.getElementById('n2').value;
+            var c = a*b;
+            document.getElementById('result').innerHTML = "The Result is: <br>" + c;
+        }
+        function fun2(){
+            var a = document.getElementById('n1').value;
+            var b = document.getElementById('n2').value;
+            var c = a/b;
+            document.getElementById('result').innerHTML = "The Result is: <br>" + c;
+        }
+    </script>
+</html>

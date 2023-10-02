@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>JS Task-1</title>
+        <style>
+            body{
+                margin-left: 50px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Enter the Number: 
+            <input type="number" id="num">
+        </p>
+        <button onclick="fun()">Reverse</button>
+        <p>Output: <span id="output"></span></p>
+        <script>
+            function fun(){
+                let n = document.getElementById('num').value;
+                let revnum = 0;
+                let rightnum = 0;
+                while(n>0){
+                    rightnum = n%10;
+                    revnum = revnum*10 + rightnum;
+                    n = Math.floor(n/10);
+                }
+
+                document.getElementById("output").innerText = revnum;
+            }
+        </script>
+    </body>
+</html>

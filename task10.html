@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>JS Task-4</title>
+        <style>
+            body{
+                margin: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" id="date" onclick="showdate()">show date</button><br>
+        <span id="show1"></span><br><br>
+
+        <button type="button" onclick="showall()">show time</button><br>
+        <span id="show2"></span>
+
+        <script>
+            function showdate(){
+                const d = new Date();
+                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                document.getElementById("show1").innerText = d.getDate() + "/" + monthNames[d.getMonth()] + "/" + d.getFullYear();
+            }
+
+            function showall(){
+                const d = new Date;
+                document.getElementById("show2").innerText = d;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>JS Task-7</title>
+    <style>
+        body{
+            margin-top: 50px;
+        }
+        h1{
+            color: rgb(0, 0, 137);
+        }
+        img{
+            margin-left: 20%;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <img src="train-task7.webp" id="train"><br>
+        <center>
+            <p><h1>Click the buttons below to handle animation</h1></p>
+            <input type = "button" value = "Start" onclick = "move();" class="x">
+            <input type = "button" value = "Stop" onclick = "stop();" class="x">
+        </center>
+    </form>
+     <script>
+          var obj = null;
+          var animate;
+          
+          function basic() {
+             obj = document.getElementById('train');
+             obj.style.position= 'relative'; 
+             obj.style.left = '0px'; 
+          }
+          
+          function move() {
+            obj.style.left = parseInt(obj.style.left) + 15 + 'px';
+            animate = setTimeout(move,20);
+          }
+          
+          function stop() {
+             clearTimeout(animate);
+             obj.style.left = '0px'; 
+          }
+          window.onload = basic;
+    </script>
+</body>
+</html>
